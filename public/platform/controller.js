@@ -304,14 +304,17 @@ LX.Page = (function(id) {
             .then(function(user) {
                 // make sure we have an anonymous user all the time
                 self.user = self.view.$data.user = user;
-            })
-            .then(self.pull)
-            .then(function() {
-                // // once we have up-to-date information, we can try sending back and syncing updates
-                setTimeout(function() {
-                    self.sync(true, 100);   
-                }, 3500);
+
+                // async kick-off pull after completing connection
+                self.pull()
+                .then(function() {
+                    // // once we have up-to-date information, we can try sending back and syncing updates
+                    setTimeout(function() {
+                        self.sync(true, 100);   
+                    }, 3500);
+                });
             });
+
     };
 
 

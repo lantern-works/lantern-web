@@ -24,9 +24,13 @@ window.page = (function() {
 
     function mapNote(note) {
         if (note.has("category", "test")) {
-            var coords = Geohash.decode(note.get("geo")[0]);
-            var point = self.map.addPoint(note.get("text"), {lat: coords.lat, lon: coords.lon}, "sticky-note", "6ae1c4", true);
-            self.map.fitToMarkers();
+            var geohash = note.get("geo")[0];
+            if (geohash) {
+                var coords = Geohash.decode(geohash);
+                var point = self.map.addPoint(note.get("text"), {lat: coords.lat, lon: coords.lon}, "sticky-note", "6ae1c4", false);
+                self.map.fitToMarkers();
+            }
+
         }
     }
 

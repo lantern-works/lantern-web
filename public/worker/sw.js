@@ -68,11 +68,11 @@ self.__precacheManifest = [
   },
   {
     "url": "/apps/ote/index.html",
-    "revision": "1483b3395e27c94ce8cfceb985bc7b9b"
+    "revision": "959662fc915e4ff089f5f0e7fb778713"
   },
   {
     "url": "/apps/ote/index.js",
-    "revision": "5c8eba70cdb75fb9967d8f6e5f393b40"
+    "revision": "eab77d701a95e5770da897c4979226b4"
   },
   {
     "url": "/apps/rdr/browse.css",
@@ -280,7 +280,7 @@ self.__precacheManifest = [
   },
   {
     "url": "/platform/controller.js",
-    "revision": "b8f1c4aded6ed15e583da38f3b2327e58252409412b0a01cff1b5ec0543b169921661ab90f1aa121fb5f30d03647498f557381330c86ea8aae23585a1768c2ef439b535ce899310daaccb50f6e7d2640"
+    "revision": "b8f1c4aded6ed15e583da38f3b2327e58252409412b0a01cff1b5ec0543b169921661ab90f1aa121fb5f30d03647498f557381330c86ea8aae23585a1768c2ef74cc875a16c4f888b891c3ab481343e2"
   },
   {
     "url": "/platform/map.css",

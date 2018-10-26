@@ -22,7 +22,6 @@ block content
                 th Message
                 th Time
                 th Place
-                th From Radio
             tbody
                 tr(:id="item._id" v-for="item in notes_by_recency" v-if="item.geo && item.text")
                     td 
@@ -31,7 +30,6 @@ block content
                         | {{ item.text }}
                     td {{ timestamp(item) }}
                     td {{ item.geo[0] }}
-                    td {{ item.$rx ? "Yes" : "No"}}
 
 
 

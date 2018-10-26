@@ -61,14 +61,12 @@
                                 <th>Message</th>
                                 <th>Time</th>
                                 <th>Place</th>
-                                <th>From Radio</th>
                             </thead>
                             <tbody>
                                 <tr :id="item._id" v-for="item in notes_by_recency" v-if="item.geo &amp;&amp; item.text">
                                     <td> <span class="icon"><i class="fas fa-sticky-note"></i></span>{{ item.text }}</td>
                                     <td>{{ timestamp(item) }}</td>
                                     <td>{{ item.geo[0] }}</td>
-                                    <td>{{ item.$rx ? "Yes" : "No"}}</td>
                                 </tr>
                             </tbody>
                         </table>
