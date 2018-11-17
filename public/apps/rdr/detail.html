@@ -74,7 +74,7 @@
                         <div id="map-prompt" v-if="!show_inspector &amp;&amp; !show_map" @click="handleShowMap"><span class="icon"><i class="fas fa-map"></i></span><span>Show Map</span></div>
                         <div id="map" v-bind:style="'display:'  + (show_map &amp;&amp; !show_input ? 'block' : 'none')"></div>
                         <div v-cloak v-if="!page_loading &amp;&amp; !show_input">
-                            <div class="box" v-for="item in i_docs" v-if="item.parent == marker._id" v-bind:data-id="item._id" v-bind:style="makeItemStyle(item)" @click="handleToggleSelectItem(item)"><span class="status">
+                            <div class="box" v-for="item in i_docs" v-if="item.parent.indexOf(marker._id) != -1" v-bind:data-id="item._id" v-bind:style="makeItemStyle(item)" @click="handleToggleSelectItem(item)"><span class="status">
                                     <div class="tags">
                                         <div class="tag"> 
                                             <div class="icon"><i class="fas fa-thumbs-up"></i></div>{{ countVotes(item) }}

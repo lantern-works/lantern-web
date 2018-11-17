@@ -53,7 +53,7 @@ block content
         #map(v-bind:style="'display:'  + (show_map && !show_input ? 'block' : 'none')")
 
         div(v-cloak v-if="!page_loading && !show_input")
-            .box(v-for="item in i_docs" v-if="item.parent == marker._id" v-bind:data-id="item._id" v-bind:style="makeItemStyle(item)" @click="handleToggleSelectItem(item)")
+            .box(v-for="item in i_docs" v-if="item.parent.indexOf(marker._id) != -1" v-bind:data-id="item._id" v-bind:style="makeItemStyle(item)" @click="handleToggleSelectItem(item)")
 
                
                 span.status
