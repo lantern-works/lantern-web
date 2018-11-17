@@ -18,6 +18,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+// https://github.com/nikolauskrismer/Leaflet.TileLayer.PouchDBCached/blob/master/L.TileLayer.PouchDBCached.js
 
 L.TileLayer.addInitHook(function() {
 
@@ -28,13 +29,11 @@ L.TileLayer.addInitHook(function() {
     }
 
     var dbName = this.options.dbName || 'offline-tiles';
-
     if (this.options.dbOptions) {
         this._db = new PouchDB(dbName, this.options.dbOptions);
     } else {
         this._db = new PouchDB(dbName);
     }
-
     this._canvas = document.createElement('canvas');
 
     if (!(this._canvas.getContext && this._canvas.getContext('2d'))) {
@@ -95,11 +94,7 @@ L.TileLayer.include({
             tile.onload = L.bind(this._tileOnLoad, this, done, tile);
         }
 
-        // when only using cache, prevent browser from attempting a direct URL request to external resource
-        if (!this.options.useOnlyCache) {
-            tile.src = tileUrl;
-        }
-
+        tile.src = tileUrl;
         return tile;
     },
 

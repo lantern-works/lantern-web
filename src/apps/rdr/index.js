@@ -34,8 +34,7 @@ window.page = (function() {
         events.forEach(function(event) {
             var geo = event.get("geo")[0];
             if (!vu.events.hasObjectWithKey("geohash", geo)) {
-                console.log(event)
-                var title = event.get("title") || "Greater Boston Area"; // @todo use reverse location search to save title in document itself
+                var title = event.get("title") || "Event"; // @todo use reverse location search to save title in document itself
                 vu.events.push({"title": title, "geohash": geo});
             }
         });

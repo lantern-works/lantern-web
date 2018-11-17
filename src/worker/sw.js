@@ -106,7 +106,7 @@ self.__precacheManifest = [
   },
   {
     "url": "/apps/rdr/index.js",
-    "revision": "b5adbfb134a5a8039c29510b2e4db23d"
+    "revision": "0e20533e0bacbc659200b2c0abc0d699"
   },
   {
     "url": "/apps/rpt/index.css",
@@ -286,7 +286,7 @@ self.__precacheManifest = [
   },
   {
     "url": "/platform/map.js",
-    "revision": "b8f1c4aded6ed15e583da38f3b2327e58a6ca7e8a00960f59e265e8a79e8559ef8d7b41407250d40369c2de1989bdeaf73ec3813dd667a6de2c94ae7a678717bfd490b1aac715917ece6d56a5de11e64"
+    "revision": "b8f1c4aded6ed15e583da38f3b2327e58a6ca7e8a00960f59e265e8a79e8559ecc6a9cb09c9a98afdd6a77ca6a295e0573ec3813dd667a6de2c94ae7a678717bfd490b1aac715917ece6d56a5de11e64"
   },
   {
     "url": "/platform/storage.js",
